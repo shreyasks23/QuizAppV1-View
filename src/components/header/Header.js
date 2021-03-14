@@ -1,9 +1,9 @@
 import Navbar from './navbar/Navbar'
 
-function Header(props) {
-    return <div>
-        <Navbar/>  
-    </div> 
+export default function Header(props) {
+    return (
+        <div>
+            <Navbar />
+        </div>
+    )
 }
-
-export default Header;

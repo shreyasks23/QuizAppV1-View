@@ -1,13 +1,13 @@
 import { Component } from 'react';
 
-class Dashboard extends Component {
+export default class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
     render() {
-        return <div>
+        return (
             <div className="row">
                 <div className="col s12 m6">
                     <div className="card blue-grey darken-3 hoverable">
@@ -45,8 +45,6 @@ class Dashboard extends Component {
                     </div>
                 </div>
             </div>
-        </div>
+        )
     }
 }
-
-export default Dashboard;

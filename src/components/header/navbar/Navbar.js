@@ -1,39 +1,38 @@
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddUser from '../../user/AddUser';
 import User from "../../user/ManageUser";
 import Dashboard from "../../dashboard/Dashboard"
+import ManageAssessment from "../../assessments/ManageAssessment";
+import ViewQuestions from '../../question/ViewQuestions'
 
-function Navbar(props) {
-    return <div>
+export default function Navbar(props) {
+    return (
+        <div>
         <Router>
             <div>
                 <nav>
                     <div className="nav-wrapper indigo lighten-2">
                         <a href="#!" className="brand-logo"><i className="material-icons">cloud</i>Test Player</a>
-                        <ul className="right hide-on-med-and-down">
+                        <ul className="right">
                             <li><i className="material-icons">
                                 <Link to="/Dashboard">home</Link>
                             </i></li>
                             <li><i className="material-icons">
-                                <Link to="/Users">people_outline</Link></i></li>
-                            <li><i className="material-icons"><Link to='/AddUser'>person_add
-                            </Link></i></li> 
-                            <li><i className="material-icons"><Link to='/AddUser'>account_circle
-                            </Link></i></li> 
+                                <Link to="/Users">people_outline</Link>
+                            </i></li>
+                            <li><i className="material-icons">
+                                <Link to='/AddUser'>person_add</Link>
+                            </i></li>
+                            <li><i className="material-icons">
+                                <Link to='/AddUser'>account_circle</Link>
+                                </i></li>                                
                         </ul>
                     </div>
-                </nav>
+                </nav>          
 
-                {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/Dashboard">
-                        <Dashboard/>
+                        <Dashboard />
                     </Route>
                     <Route path="/users">
                         <User />
@@ -41,10 +40,15 @@ function Navbar(props) {
                     <Route path="/AddUser">
                         <AddUser />
                     </Route>
+                    <Route path="/ManageAssessment">
+                        <ManageAssessment />
+                        </Route>
+                        <Route path="/ViewQuestions">
+                        <ViewQuestions />
+                    </Route>
                 </Switch>
             </div>
-        </Router>        
+        </Router>
     </div>
+    )
 }
-
-export default Navbar;

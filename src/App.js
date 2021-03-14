@@ -1,16 +1,15 @@
 
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+//
 
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App container">
+    <div className="App">
       <Header appName="Test & Assessment" />
+      {/* <ViewQuestions /> */}
       <Footer />
     </div>
   );
 }
-
-export default App;

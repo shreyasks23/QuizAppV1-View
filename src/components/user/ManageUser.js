@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class User extends Component {
+export default class User extends Component {
 
     constructor(props) {
         super(props);
@@ -29,13 +29,13 @@ class User extends Component {
                 Name: 'swamy',
                 Password: 'passwordnew5',
                 IsDeleted: false
-                },
-                {
-                    Id: 5,
-                    Name: 'tatha',
-                    Password: 'passwordnew6',
-                    IsDeleted: false
-                    }
+            },
+            {
+                Id: 5,
+                Name: 'tatha',
+                Password: 'passwordnew6',
+                IsDeleted: false
+            }
             ]
         }
 
@@ -44,10 +44,8 @@ class User extends Component {
     render() {
         const users = this.state.users;
         const title = 'Manage Users';
-        return <div>
-            <div>
-                <span className='center-align'><h3>{ title }</h3></span>
-            </div>
+        return <div className='container'>
+            <span className='center-align'><h3>{title}</h3></span>
             <table>
                 <thead>
                     <tr>
@@ -63,6 +61,9 @@ class User extends Component {
                         <th>
                             Is deleted
                     </th>
+                        <th colSpan={2} className='center-align'>
+                            Action
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,7 +72,7 @@ class User extends Component {
                         users.map(
                             (u, i) => {
                                 return (
-                                    <tr key= {i}>
+                                    <tr key={i}>
                                         <td>
                                             {u.Id}
                                         </td>
@@ -84,16 +85,20 @@ class User extends Component {
                                         <td>
                                             {u.IsDeleted.toString()}
                                         </td>
+                                        <td className='center-align' >
+                                            <button className='btn btn-small light-green darken-3'>Edit</button>
+                                        </td>
+                                        <td className='center-align'>
+                                            <button className='btn btn-small red darken-3'>Delete</button>
+                                        </td>
                                     </tr>
                                 )
                             }
                         )
                     }
-                    
+
                 </tbody>
             </table>
         </div>
     }
 }
-
-export default User;

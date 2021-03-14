@@ -1,7 +1,5 @@
-function Footer(props) {
+export default function Footer(props) {
     return <footer className='footer'>        
-            Copyright Reserved       
+            copyright reserved &copy;      
     </footer>
 }
-
-export default Footer;
