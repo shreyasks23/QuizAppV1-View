@@ -6,6 +6,7 @@ import ManageAssessment from "../../assessments/ManageAssessment";
 import ViewQuestions from "../../question/ViewQuestions";
 import AddQuestion from "../../question/AddQuestion";
 import AddAssessment from "../../assessments/AddAssessment";
+import AssessmentQuestion from "../../assessments/AssessmentQuestions";
 
 export default function Navbar(props) {
   return (
@@ -41,29 +42,22 @@ export default function Navbar(props) {
               </ul>
             </div>
           </nav>
-
           <Switch>
-            <Route path="/Dashboard">
-              <Dashboard />
-            </Route>
-            <Route path="/users">
-              <User />
-            </Route>
-            <Route path="/AddUser">
-              <AddUser />
-            </Route>
-            <Route path="/ManageAssessment">
-              <ManageAssessment />
-            </Route>
-            <Route path="/ViewQuestions">
-              <ViewQuestions />
-            </Route>
-            <Route path="/AddQuestion">
-              <AddQuestion />
-            </Route>
-            <Route path="/AddAssessment">
-              <AddAssessment />
-            </Route>
+            <Route path="/Dashboard" component={Dashboard} />
+
+            <Route path="/users" component={User} />
+
+            <Route path="/AddUser" component={AddUser} />
+
+            <Route path="/ManageAssessment" component={ManageAssessment} />
+
+            <Route path="/ViewQuestions" component={ViewQuestions} />
+
+            <Route path="/AddQuestion" component={AddQuestion} />
+
+            <Route path="/AddAssessment" component={AddAssessment} />
+
+            <Route path="/AssessmentQuestions" component={AssessmentQuestion} />
           </Switch>
         </>
       </Router>

@@ -33,8 +33,8 @@ export default class AddUser extends Component {
   render() {
     const btnStyle = {
       margin: "5px",
-      "padding-left": "10px",
-      "padding-right": "10px",
+      "paddingLeft": "10px",
+      "paddingRight": "10px",
     };
 
     return (
