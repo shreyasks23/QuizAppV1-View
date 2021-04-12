@@ -1,0 +1,9 @@
+.selectedOption {
+    background-color: "red";
+    border: ".5px dotted green";
+}
+
+.notSelectedOption {
+    background-color: "white";
+    border: ".5px dotted green";
+}
