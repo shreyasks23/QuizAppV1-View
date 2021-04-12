@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link  } from "react-router-dom";
 
 export default class ManageAssessment extends Component {
   constructor(props) {
@@ -57,7 +58,10 @@ export default class ManageAssessment extends Component {
               return (
                 <tr key={i}>
                   <td>{a.assessmentId}</td>
-                  <td>{a.assessmentName}</td>
+                  <td><Link to={{
+                    pathname: '/assessmentQuestions',
+                    state : a.assessmentId
+                  }}>{a.assessmentName}</Link></td>
                   <td>{a.maxMarks}</td>
                   <td className="center-align">
                     <button className="btn btn-small light-green darken-3">
