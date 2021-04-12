@@ -1,7 +1,11 @@
 {
     "emmet.includeLanguages": {
        "javascript": "javascriptreact"
+<<<<<<< HEAD
    },
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications"
+=======
+    }
+>>>>>>> 4738f7cdeb473232c1536f6a0daca9851c4db211
  }
